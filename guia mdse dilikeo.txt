@@ -1,0 +1,44 @@
+project setup --topLevelPackage com.ejemplo.dilikeo 
+
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class ~.domain.Cliente
+
+field string --fieldName nombre --notNull
+
+field number --fieldName telefono --type long --notNull
+field string --fieldName correo --regexp "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" --notNull
+
+---repository ...
+
+enum type --class ~.domain.Producto
+enum constant --name PRODUCTO1DILIKEO
+enum constant --name PRODUCTO2
+enum constant --name PRODUCTO3
+enum constant --name PRODUCTO4
+enum constant --name PRODUCTO5
+enum constant --name PRODUCTO6
+enum constant --name PRODUCTO7
+enum constant --name PRODUCTO8
+enum constant --name PRODUCTO9
+enum constant --name PRODUCTO10
+entity jpa --class ~.domain.Venta
+field string --fieldName nombrecliente --notNull
+
+field string --fieldName 
+field date --fieldName fechaNacimiento --type java.util.Date --past
+
+
+field enum --fieldName producto--type ~.domain.Producto --notNull
+
+
+ 
+repository jpa --all
+service --all
+web mvc setup
+web mvc view setup 
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+quit
+mvn spring-boot:run
+
+POR CADA ENTIDAD QUE CREE FUE NECESARIO INSTANCIAR EL RESPONSE TYPE DE CADA CONTROLLADOR Y EL PATH PREFIX

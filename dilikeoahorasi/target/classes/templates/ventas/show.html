@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_venta})}|">Show Venta - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${venta}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_venta})}">Show Venta</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_venta})}">Venta data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="venta-producto-field" data-z="d6902ae1">
+            	      <strong data-th-text="#{label_venta_producto}">producto</strong>
+                    <span data-th-text="*{{producto}}">productoValue</span>
+         	        </li>
+                  <li id="venta-id_cliente-field" data-z="ce33bba1">
+            	      <strong data-th-text="#{label_venta_id_cliente}">id_cliente</strong>
+                    <span data-th-text="*{{id_cliente}}">id_clienteValue</span>
+         	        </li>
+                  <li id="venta-cantidad-field" data-z="e0a87aa1">
+            	      <strong data-th-text="#{label_venta_cantidad}">cantidad</strong>
+                    <span data-th-text="*{{cantidad}}">cantidadValue</span>
+         	        </li>
+                  <li id="venta-garantia-field" data-z="72364601">
+            	      <strong data-th-text="#{label_venta_garantia}">garantia</strong>
+                    <span data-th-text="*{{garantia}}">garantiaValue</span>
+         	        </li>
+                  <li id="venta-vendedor-field" data-z="83105601">
+            	      <strong data-th-text="#{label_venta_vendedor}">vendedor</strong>
+                    <span data-th-text="*{{vendedor}}">vendedorValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Venta_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('VentasItemThymeleafController').to('editForm').with('venta', venta.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Venta_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('VentasCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

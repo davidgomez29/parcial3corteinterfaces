@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Page menu</title>
+  </head>
+  <body id="body">
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu">
+
+         <div class="container">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="dilikeo" href="/" data-th-href="@{/}">
+                  <img alt="dilikeo" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">dilikeo</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <ul class="nav navbar-nav" id="entitiesMenuEntries">
+                <li class="dropdown" id="cambios-entry" data-z="f9287dd6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_cambios})}">Cambios<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/cambioss/create-form" data-th-href="@{/cambioss/create-form}" data-th-utext="#{label_create_entity(#{label_cambios})}">Create Cambios</a></li>
+	                  <li><a href="/cambioss" data-th-href="@{/cambioss}" data-th-utext="#{label_list_entity(#{label_cambios_plural})}">List Cambios</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="cliente-entry" data-z="5b7dd6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_cliente})}">Cliente<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/clientes/create-form" data-th-href="@{/clientes/create-form}" data-th-utext="#{label_create_entity(#{label_cliente})}">Create Cliente</a></li>
+	                  <li><a href="/clientes" data-th-href="@{/clientes}" data-th-utext="#{label_list_entity(#{label_cliente_plural})}">List Cliente</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="datosdomiciliario-entry" data-z="8a440536">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_datosdomiciliario})}">DatosDomiciliario<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/datosdomiciliarios/create-form" data-th-href="@{/datosdomiciliarios/create-form}" data-th-utext="#{label_create_entity(#{label_datosdomiciliario})}">Create DatosDomiciliario</a></li>
+	                  <li><a href="/datosdomiciliarios" data-th-href="@{/datosdomiciliarios}" data-th-utext="#{label_list_entity(#{label_datosdomiciliario_plural})}">List DatosDomiciliario</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="datosvendedor-entry" data-z="16b5e8b6">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_datosvendedor})}">DatosVendedor<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/datosvendedors/create-form" data-th-href="@{/datosvendedors/create-form}" data-th-utext="#{label_create_entity(#{label_datosvendedor})}">Create DatosVendedor</a></li>
+	                  <li><a href="/datosvendedors" data-th-href="@{/datosvendedors}" data-th-utext="#{label_list_entity(#{label_datosvendedor_plural})}">List DatosVendedor</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="devoluciones-entry" data-z="b2f6dea3">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_devoluciones})}">Devoluciones<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/devolucioneses/create-form" data-th-href="@{/devolucioneses/create-form}" data-th-utext="#{label_create_entity(#{label_devoluciones})}">Create Devoluciones</a></li>
+	                  <li><a href="/devolucioneses" data-th-href="@{/devolucioneses}" data-th-utext="#{label_list_entity(#{label_devoluciones_plural})}">List Devoluciones</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="llegadamercancia-entry" data-z="55d361c8">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_llegadamercancia})}">LlegadaMercancia<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/llegadamercancias/create-form" data-th-href="@{/llegadamercancias/create-form}" data-th-utext="#{label_create_entity(#{label_llegadamercancia})}">Create LlegadaMercancia</a></li>
+	                  <li><a href="/llegadamercancias" data-th-href="@{/llegadamercancias}" data-th-utext="#{label_list_entity(#{label_llegadamercancia_plural})}">List LlegadaMercancia</a></li>
+                 </ul>
+                </li>
+                <li class="dropdown" id="venta-entry" data-z="41844396">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-th-utext="#{label_menu_entry(#{label_venta})}">Venta<span class="caret"></span></a>
+                 <ul class="dropdown-menu">
+	                   <li><a href="/ventas/create-form" data-th-href="@{/ventas/create-form}" data-th-utext="#{label_create_entity(#{label_venta})}">Create Venta</a></li>
+	                  <li><a href="/ventas" data-th-href="@{/ventas}" data-th-utext="#{label_list_entity(#{label_venta_plural})}">List Venta</a></li>
+                 </ul>
+                </li>
+              </ul>
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+
+
+              <!-- User menu links -->
+              <ul class="nav navbar-nav navbar-right upper-nav links" data-th-replace="~{fragments/session-links :: links}">
+                <!-- Content replaced by the links template fragment session-links.html
+                -->
+                <span>User session data</span>
+              </ul>
+           </div>
+
+          </div>
+    </nav>
+
+    <!--
+    Only the internal content of the following div is included within
+    the template, in menu-languages fragment
+    -->
+    <nav class="navbar navbar-default navbar-static-top" data-th-fragment="menu-languages">
+
+         <div class="container">
+
+            <div class="navbar-header">
+
+              <!-- Brand logo -->
+              <div class="organization-logo navbar-brand">
+                <a title="dilikeo" href="/" data-th-href="@{/}">
+                  <img alt="dilikeo" data-th-src="@{/public/img/logo.png}" src="../../static/public/img/logo.png" />
+                </a>
+              </div>
+              <!-- Name application -->
+              <div class="application-name navbar-brand hidden-xs">
+                <a data-th-title="#{label_goHome}" href="/" data-th-href="@{/}">dilikeo</a>
+              </div>
+
+            </div><!-- /navbar-header -->
+
+            <div id="mainnav" class="navbar-collapse collapse">
+
+              <!-- Language select -->
+              <ul class="nav navbar-nav navbar-right upper-nav languages" data-th-replace="~{fragments/languages :: languages}">
+                <!-- Content replaced by the session template fragment language.html
+                -->
+                <span>Language data</span>
+              </ul>
+
+           </div>
+
+          </div>
+    </nav>
+
+  </body>
+</html>

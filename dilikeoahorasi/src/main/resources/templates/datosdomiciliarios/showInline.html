@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+    <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_datosdomiciliario})}|">Show DatosDomiciliario - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-th-fragment="inline-content" data-layout-fragment="content" data-th-object="${datosDomiciliario}">
+        <div>
+
+          <!-- CONTENT -->
+            <div id="mainEntityFieldSet">
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="datosdomiciliario-nombre-field" data-z="33f84c11">
+            	      <strong data-th-text="#{label_datosdomiciliario_nombre}">nombre</strong>
+                    <span data-th-text="*{{nombre}}">nombreValue</span>
+         	        </li>
+                  <li id="datosdomiciliario-telefono-field" data-z="61e9a631">
+            	      <strong data-th-text="#{label_datosdomiciliario_telefono}">telefono</strong>
+                    <span data-th-text="*{{telefono}}">telefonoValue</span>
+         	        </li>
+                  <li id="datosdomiciliario-cedula-field" data-z="468f1c31">
+            	      <strong data-th-text="#{label_datosdomiciliario_cedula}">cedula</strong>
+                    <span data-th-text="*{{cedula}}">cedulaValue</span>
+         	        </li>
+                  <li id="datosdomiciliario-direccion-field" data-z="9a38d84d">
+            	      <strong data-th-text="#{label_datosdomiciliario_direccion}">direccion</strong>
+                    <span data-th-text="*{{direccion}}">direccionValue</span>
+         	        </li>
+                  <li id="datosdomiciliario-nombreenbase-field" data-z="46394751">
+            	      <strong data-th-text="#{label_datosdomiciliario_nombreenbase}">nombreenbase</strong>
+                    <span data-th-text="*{{nombreenbase}}">nombreenbaseValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

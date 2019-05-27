@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="datosvendedor-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('DatosVendedorsCollectionThymeleafController')},itemLink=${@linkBuilder.of('DatosVendedorsItemThymeleafController')}">
+    <table id="datosvendedor-entity-table-items-to-remove-batch" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="vendedorexistente" data-th-text="#{label_datosvendedor_vendedorexistente}">vendedorexistente</th>
+          <th data-data="telefono" data-th-text="#{label_datosvendedor_telefono}">telefono</th>
+          <th data-data="correo" data-th-text="#{label_datosvendedor_correo}">correo</th>
+          <th data-data="cedula" data-th-text="#{label_datosvendedor_cedula}">cedula</th>
+          <th data-data="direccion" data-th-text="#{label_datosvendedor_direccion}">direccion</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>vendedorexistente</td>
+          <td>telefono</td>
+          <td>correo</td>
+          <td>cedula</td>
+          <td>direccion</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

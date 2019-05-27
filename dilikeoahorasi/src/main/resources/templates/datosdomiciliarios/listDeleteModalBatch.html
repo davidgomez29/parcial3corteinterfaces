@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="datosdomiciliario-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('DatosDomiciliariosCollectionThymeleafController')},itemLink=${@linkBuilder.of('DatosDomiciliariosItemThymeleafController')}">
+    <table id="datosdomiciliario-entity-table-items-to-remove-batch" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="nombre" data-th-text="#{label_datosdomiciliario_nombre}">nombre</th>
+          <th data-data="telefono" data-th-text="#{label_datosdomiciliario_telefono}">telefono</th>
+          <th data-data="cedula" data-th-text="#{label_datosdomiciliario_cedula}">cedula</th>
+          <th data-data="direccion" data-th-text="#{label_datosdomiciliario_direccion}">direccion</th>
+          <th data-data="nombreenbase" data-th-text="#{label_datosdomiciliario_nombreenbase}">nombreenbase</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>nombre</td>
+          <td>telefono</td>
+          <td>cedula</td>
+          <td>direccion</td>
+          <td>nombreenbase</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

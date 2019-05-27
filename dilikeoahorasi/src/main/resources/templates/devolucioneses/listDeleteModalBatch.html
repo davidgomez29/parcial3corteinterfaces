@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="devoluciones-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('DevolucionesesCollectionThymeleafController')},itemLink=${@linkBuilder.of('DevolucionesesItemThymeleafController')}">
+    <table id="devoluciones-entity-table-items-to-remove-batch" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="id_cliente" data-th-text="#{label_devoluciones_id_cliente}">id_cliente</th>
+          <th data-data="producto" data-th-text="#{label_devoluciones_producto}">producto</th>
+          <th data-data="cantidad" data-th-text="#{label_devoluciones_cantidad}">cantidad</th>
+          <th data-data="Comentario" data-th-text="#{label_devoluciones_comentario}">Comentario</th>
+          <th data-data="dinerodevuelto" data-th-text="#{label_devoluciones_dinerodevuelto}">dinerodevuelto</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>id_cliente</td>
+          <td>producto</td>
+          <td>cantidad</td>
+          <td>Comentario</td>
+          <td>dinerodevuelto</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

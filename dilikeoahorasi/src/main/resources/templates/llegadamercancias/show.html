@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_llegadamercancia})}|">Show LlegadaMercancia - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${llegadaMercancia}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_llegadamercancia})}">Show LlegadaMercancia</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_llegadamercancia})}">LlegadaMercancia data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="llegadamercancia-productos-field" data-z="ad031faa">
+            	      <strong data-th-text="#{label_llegadamercancia_productos}">productos</strong>
+                    <span data-th-text="*{{productos}}">productosValue</span>
+         	        </li>
+                  <li id="llegadamercancia-cantidad-field" data-z="51bdf514">
+            	      <strong data-th-text="#{label_llegadamercancia_cantidad}">cantidad</strong>
+                    <span data-th-text="*{{cantidad}}">cantidadValue</span>
+         	        </li>
+                  <li id="llegadamercancia-fechallegada-field" data-z="ad56a6f4">
+            	      <strong data-th-text="#{label_llegadamercancia_fechallegada}">fechallegada</strong>
+                    <span data-th-text="*{{fechallegada}}">fechallegadaValue</span>
+         	        </li>
+                  <li id="llegadamercancia-proveedor-field" data-z="4bf4524a">
+            	      <strong data-th-text="#{label_llegadamercancia_proveedor}">proveedor</strong>
+                    <span data-th-text="*{{proveedor}}">proveedorValue</span>
+         	        </li>
+                  <li id="llegadamercancia-receptorproductos-field" data-z="72d49bea">
+            	      <strong data-th-text="#{label_llegadamercancia_receptorproductos}">ReceptorProductos</strong>
+                    <span data-th-text="*{{ReceptorProductos}}">ReceptorProductosValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="LlegadaMercancia_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('LlegadaMercanciasItemThymeleafController').to('editForm').with('llegadaMercancia', llegadaMercancia.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="LlegadaMercancia_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('LlegadaMercanciasCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

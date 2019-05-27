@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_devoluciones})}|">Show Devoluciones - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${devoluciones}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_devoluciones})}">Show Devoluciones</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_devoluciones})}">Devoluciones data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="devoluciones-id_cliente-field" data-z="59e70dc1">
+            	      <strong data-th-text="#{label_devoluciones_id_cliente}">id_cliente</strong>
+                    <span data-th-text="*{{id_cliente}}">id_clienteValue</span>
+         	        </li>
+                  <li id="devoluciones-producto-field" data-z="85318501">
+            	      <strong data-th-text="#{label_devoluciones_producto}">producto</strong>
+                    <span data-th-text="*{{producto}}">productoValue</span>
+         	        </li>
+                  <li id="devoluciones-cantidad-field" data-z="8f49d4c1">
+            	      <strong data-th-text="#{label_devoluciones_cantidad}">cantidad</strong>
+                    <span data-th-text="*{{cantidad}}">cantidadValue</span>
+         	        </li>
+                  <li id="devoluciones-comentario-field" data-z="98976c81">
+            	      <strong data-th-text="#{label_devoluciones_comentario}">Comentario</strong>
+                    <span data-th-text="*{{Comentario}}">ComentarioValue</span>
+         	        </li>
+                  <li id="devoluciones-dinerodevuelto-field" data-z="64272821">
+            	      <strong data-th-text="#{label_devoluciones_dinerodevuelto}">dinerodevuelto</strong>
+                    <span data-th-text="*{{dinerodevuelto}}">dinerodevueltoValue</span>
+         	        </li>
+                  <li id="devoluciones-fechadevolucion-field" data-z="ef7320dd">
+            	      <strong data-th-text="#{label_devoluciones_fechadevolucion}">fechadevolucion</strong>
+                    <span data-th-text="*{{fechadevolucion}}">fechadevolucionValue</span>
+         	        </li>
+                  <li id="devoluciones-quien_hace_devolucion-field" data-z="9d959f9d">
+            	      <strong data-th-text="#{label_devoluciones_quien_hace_devolucion}">quien_hace_devolucion</strong>
+                    <span data-th-text="*{{quien_hace_devolucion}}">quien_hace_devolucionValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Devoluciones_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('DevolucionesesItemThymeleafController').to('editForm').with('devoluciones', devoluciones.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Devoluciones_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('DevolucionesesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_cliente})}|">Show Cliente - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${cliente}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_cliente})}">Show Cliente</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_cliente})}">Cliente data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="cliente-nombre-field" data-z="887c9eaf">
+            	      <strong data-th-text="#{label_cliente_nombre}">nombre</strong>
+                    <span data-th-text="*{{nombre}}">nombreValue</span>
+         	        </li>
+                  <li id="cliente-telefono-field" data-z="a6a3c94f">
+            	      <strong data-th-text="#{label_cliente_telefono}">telefono</strong>
+                    <span data-th-text="*{{telefono}}">telefonoValue</span>
+         	        </li>
+                  <li id="cliente-direccion-field" data-z="ecc318ef">
+            	      <strong data-th-text="#{label_cliente_direccion}">direccion</strong>
+                    <span data-th-text="*{{direccion}}">direccionValue</span>
+         	        </li>
+                  <li id="cliente-fecha_de_registro_en_sistema-field" data-z="e945e44f">
+            	      <strong data-th-text="#{label_cliente_fecha_de_registro_en_sistema}">fecha_de_registro_en_sistema</strong>
+                    <span data-th-text="*{{fecha_de_registro_en_sistema}}">fecha_de_registro_en_sistemaValue</span>
+         	        </li>
+                  <li id="cliente-correo-field" data-z="d59ca10f">
+            	      <strong data-th-text="#{label_cliente_correo}">correo</strong>
+                    <span data-th-text="*{{correo}}">correoValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Cliente_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('ClientesItemThymeleafController').to('editForm').with('cliente', cliente.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Cliente_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('ClientesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

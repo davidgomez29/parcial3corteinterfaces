@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="venta-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('VentasCollectionThymeleafController')},itemLink=${@linkBuilder.of('VentasItemThymeleafController')}">
+    <table id="venta-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="producto" data-th-text="#{label_venta_producto}">producto</th>
+          <th data-data="id_cliente" data-th-text="#{label_venta_id_cliente}">id_cliente</th>
+          <th data-data="cantidad" data-th-text="#{label_venta_cantidad}">cantidad</th>
+          <th data-data="garantia" data-th-text="#{label_venta_garantia}">garantia</th>
+          <th data-data="vendedor" data-th-text="#{label_venta_vendedor}">vendedor</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>producto</td>
+          <td>id_cliente</td>
+          <td>cantidad</td>
+          <td>garantia</td>
+          <td>vendedor</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->

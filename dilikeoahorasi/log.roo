@@ -1,0 +1,158 @@
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:08:16
+project setup --topLevelPackage com.dilikeo
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class ~.domain.Cliente
+field string --fieldName nombre --notNull
+repository jpa --all
+service --all
+web mvc setup 
+web mvc view setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:13:45
+focus --class ~.domain.Cliente
+field number --fieldName telefono --type long --notNull 
+field string --fieldName direccion --notNull 
+field date --fieldName fecha_de_registro_en_sistema --type java.util.Date --past 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:20:31
+entity jpa --class ~.domain.Venta
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:24:47
+enum type --class ~.domain.Producto
+enum constant --name Aire_acondicionado
+enum constant --name Camaras
+enum constant --name Acuario
+enum constant --name Control_ipega_9099
+enum constant --name Control_ipega_9093
+enum constant --name Manilla_M2
+enum constant --name Crispetera
+enum constant --name Tensiometro
+enum constant --name Audifonos_Gamer
+enum constant --name Paint_Roller
+focus --class ~.domain.Venta
+// [failed] field enum --fieldName producto --type ~.domain.Producto --notNull 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:31:48
+focus --class ~.domain.Producto
+focus --class ~.domain.Venta
+field enum --fieldName producto --type ~.domain.Producto --notNull 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:40:22
+focus --class ~.domain.Venta
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:44:33
+focus --class ~.domain.Venta
+focus --class ~.domain.Cliente
+field string --fieldName correo --regexp "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" --notNull
+focus --class ~.domain.Venta
+field number --fieldName id_cliente --type int --notNull 
+field number --fieldName cantidad --type int --notNull 
+focus --class ~.domain.Producto
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 09:58:22
+enum type --class ~.domain.Garantia
+enum constant --name MESES_12
+enum constant --name MESES_3
+enum constant --name MESES_1
+enum constant --name MESES_6
+enum constant --name MESES_18
+enum constant --name MESES_24
+focus --class ~.domain.Venta
+// [failed] field enum --fieldName garantia --type ~.domain.Garantia
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:02:48
+focus --class ~.domain.Venta
+field enum --fieldName garantia --type ~.domain.Garantia --notNull 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:07:53
+enum type --class ~.domain.Vendedor --
+enum constant --name John_Alexander_Suarez_Lopez 
+enum constant --name Carlos_David_Gomez_Torres
+focus --class ~.domain.Venta
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:10:45
+focus --class ~.domain.Venta
+field enum --fieldName vendedor --type ~.domain.Vendedor  
+// [failed] field enum --fieldName vendedor --type ~.domain.Vendedor --notNull
+field enum --fieldName vendedor --type ~.domain.Vendedor --notNull --force
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:15:16
+entity jpa --class ~.domain.DatosVendedor
+// [failed] field set --fieldName vendedor --type ~.domain.Vendedor
+// [failed] field set --fieldName vendedor --type ~.domain.Vendedor --notNull 
+field enum --fieldName vendedorexistente --type ~.domain.Vendedor --notNull 
+field number --fieldName telefono --type long --notNull 
+field string --fieldName correo --regexp "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" --notNull
+field string --fieldName cedula --notNull 
+field string --fieldName direccion --notNull 
+field string --fieldName EPS 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:29:30
+focus --class ~.domain.DatosVendedor
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:34:19
+entity jpa --class ~.domain.LlegadaMercancia
+field enum --fieldName productos --type ~.domain.Producto --notNull 
+field string --fieldName cantidad --notNull 
+field date --fieldName fechallegada --type java.util.Date --past 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:37:10
+enum type --class ~.domain.Proveedor
+enum constant --name LAINDEPENDENCIA
+enum constant --name JUEGOS_Z3
+enum constant --name GAMEOVER
+enum constant --name SOLO_JUEGOS_LA_15
+enum constant --name LA_TIENDA_GRANDE
+enum constant --name BOLAOCHO
+focus --class ~.domain.LlegadaMercancia
+// [failed] field enum --fieldName proveedor --type ~.domain.Proveedor
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:39:53
+focus --class ~.domain.LlegadaMercancia
+field enum --fieldName proveedor --type ~.domain.Proveedor --notNull 
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:44:20
+focus --class ~.domain.LlegadaMercancia
+field enum --fieldName ReceptorProductos --type ~.domain.Vendedor
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:47:40
+entity jpa --class ~.domain.DatosDomiciliario
+field string --fieldName nombre --notNull 
+field string --fieldName telefono --notNull
+field string --fieldName cedula --notNull
+field string --fieldName direccion --notNull
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+focus --class ~.domain.Venta
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:51:51
+enum type --class ~.domain.Domiciliario
+enum constant --name Pepito_Perez
+enum constant --name Juanito_Torres
+enum constant --name Camila_Barrera
+enum constant --name Ernesto_Velandia
+focus --class ~.domain.DatosDomiciliario
+// [failed] field enum --fieldName nombreenbase --type ~.domain.Domiciliario --notNull 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 10:56:59
+focus --class ~.domain.DatosDomiciliario
+field enum --fieldName nombreenbase --type ~.domain.Domiciliario --notNull 
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 11:01:25
+entity jpa --class ~.domain.Devoluciones
+field number --fieldName id_cliente --type int --notNull 
+field enum --fieldName producto --type ~.domain.Producto --notNull 
+field number --fieldName cantidad --type int --notNull 
+field string --fieldName Comentario --notNull 
+field string --fieldName dinerodevuelto --notNull 
+field date --fieldName fechadevolucion --type java.util.Date --past --notNull 
+field enum --fieldName quien_hace_devolucion --type ~.domain.Vendedor --notNull 
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api
+// Spring Roo 2.0.0.RELEASE [rev 4a2e9f1] log opened at 2019-05-27 11:13:20
+entity jpa --class ~.domain.Cambios
+field enum --fieldName producto --type ~.domain.Producto --notNull 
+field string --fieldName aidcliente
+field date --fieldName fechacambio --type java.util.Date --past 
+repository jpa --all
+service --all
+web mvc controller --all --responseType THYMELEAF
+web mvc controller --all --pathPrefix /api

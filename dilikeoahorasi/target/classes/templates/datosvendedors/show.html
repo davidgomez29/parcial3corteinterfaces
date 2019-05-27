@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_datosvendedor})}|">Show DatosVendedor - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${datosVendedor}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_datosvendedor})}">Show DatosVendedor</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_datosvendedor})}">DatosVendedor data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="datosvendedor-vendedorexistente-field" data-z="321598c7">
+            	      <strong data-th-text="#{label_datosvendedor_vendedorexistente}">vendedorexistente</strong>
+                    <span data-th-text="*{{vendedorexistente}}">vendedorexistenteValue</span>
+         	        </li>
+                  <li id="datosvendedor-telefono-field" data-z="e9c68337">
+            	      <strong data-th-text="#{label_datosvendedor_telefono}">telefono</strong>
+                    <span data-th-text="*{{telefono}}">telefonoValue</span>
+         	        </li>
+                  <li id="datosvendedor-correo-field" data-z="ee74b4f7">
+            	      <strong data-th-text="#{label_datosvendedor_correo}">correo</strong>
+                    <span data-th-text="*{{correo}}">correoValue</span>
+         	        </li>
+                  <li id="datosvendedor-cedula-field" data-z="b3eb82b7">
+            	      <strong data-th-text="#{label_datosvendedor_cedula}">cedula</strong>
+                    <span data-th-text="*{{cedula}}">cedulaValue</span>
+         	        </li>
+                  <li id="datosvendedor-direccion-field" data-z="df79c07">
+            	      <strong data-th-text="#{label_datosvendedor_direccion}">direccion</strong>
+                    <span data-th-text="*{{direccion}}">direccionValue</span>
+         	        </li>
+                  <li id="datosvendedor-eps-field" data-z="1ad366e7">
+            	      <strong data-th-text="#{label_datosvendedor_eps}">EPS</strong>
+                    <span data-th-text="*{{EPS}}">EPSValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="DatosVendedor_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('DatosVendedorsItemThymeleafController').to('editForm').with('datosVendedor', datosVendedor.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="DatosVendedor_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('DatosVendedorsCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

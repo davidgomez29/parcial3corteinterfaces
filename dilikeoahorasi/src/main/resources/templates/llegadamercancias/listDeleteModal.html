@@ -1,0 +1,24 @@
+<!--TABLE-->
+<div class="table-responsive" id="containerFields" data-th-fragment="llegadamercancia-entityModalConfirmBody" data-th-with="collectionLink=${@linkBuilder.of('LlegadaMercanciasCollectionThymeleafController')},itemLink=${@linkBuilder.of('LlegadaMercanciasItemThymeleafController')}">
+    <table id="llegadamercancia-entity-table-item-to-remove" data-data-load-url="${collectionLink.to('datatablesByIdsIn')}">
+      <thead>
+        <tr>
+          <th data-data="productos" data-th-text="#{label_llegadamercancia_productos}">productos</th>
+          <th data-data="cantidad" data-th-text="#{label_llegadamercancia_cantidad}">cantidad</th>
+          <th data-data="fechallegada" data-th-text="#{label_llegadamercancia_fechallegada}">fechallegada</th>
+          <th data-data="proveedor" data-th-text="#{label_llegadamercancia_proveedor}">proveedor</th>
+          <th data-data="ReceptorProductos" data-th-text="#{label_llegadamercancia_receptorproductos}">ReceptorProductos</th>
+        </tr>
+      </thead>
+      <tbody data-th-remove="all">
+        <tr>
+          <td>productos</td>
+          <td>cantidad</td>
+          <td>fechallegada</td>
+          <td>proveedor</td>
+          <td>ReceptorProductos</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+<!-- /TABLE -->
